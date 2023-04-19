@@ -1,26 +1,17 @@
 class Account:
     def __init__(self, name: str) -> None:
         """
-        Initializes an Account object with a given name and a balance of 0.
-
-        Args:
-            name: The name of the account holder.
-
-        Returns:
-            None
+        Function to setup an account
+        :param name: the account name
         """
         self.__account_name = name
         self.__account_balance = 0
 
     def deposit(self, amount: float) -> bool:
         """
-        Deposits the specified amount into the account balance.
-
-        Args:
-            amount: The amount to be deposited.
-
-        Returns:
-            True if the deposit was successful, False otherwise.
+        Function to deposit to account
+        :param amount: the amount to deposit
+        :return: True if successful, False if not
         """
         if amount > 0:
             self.__account_balance += amount
@@ -30,13 +21,9 @@ class Account:
 
     def withdraw(self, amount: float) -> bool:
         """
-        Withdraws the specified amount from the account balance.
-
-        Args:
-            amount: The amount to be withdrawn.
-
-        Returns:
-            True if the withdrawal was successful, False otherwise.
+        Function to withdraw from account
+        :param amount: the amount to withdraw
+        :return: True if successful, False if not
         """
         if amount > 0 and amount <= self.__account_balance:
             self.__account_balance -= amount
@@ -46,24 +33,14 @@ class Account:
 
     def get_balance(self) -> float:
         """
-        Returns the current account balance.
-
-        Args:
-            None
-
-        Returns:
-            The current account balance.
+        Function to return account balance
+        :return: account balance
         """
         return self.__account_balance
 
     def get_name(self) -> str:
         """
-        Returns the name of the account holder.
-
-        Args:
-            None
-
-        Returns:
-            The name of the account holder.
+        Function to return account name
+        :return: account name
         """
         return self.__account_name
